@@ -18,12 +18,12 @@ class App extends Component{
     .then(users => this.setState({monsters: users}));
   }
   
+  onHandleChange(){}
   render(){
     const { monsters, searchField } = this.state;
-    const filteredMonsters = monsters.filter(monster => {
-      
-      monster.name.toLowerCase().includes(searchField.toLowerCase());
-    });
+    const filteredMonsters = monsters.filter(monster => 
+      monster.name.toLowerCase().includes(searchField.toLowerCase())
+    );
     // console.log(monsters.length)
     // console.log(filteredMonsters.length)
     return (
